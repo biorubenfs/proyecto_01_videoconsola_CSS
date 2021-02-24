@@ -1,5 +1,3 @@
-/* NOTA RUBEEEEEEEEN: cambiar los em por %  */
-
 :root {
   --azulTexto: #232873;
   --grisCarcasa: #d1d1d1;
@@ -11,75 +9,206 @@
 /* Un lienzo para colocar el resto de elementos */
 
 .bg {
-  height: 40em;
-  width: 40em;
+  height: 60em;
+  width: 30em;
   background-color: white;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 0.1px solid black;
 }
 
 /* Elementos principales: CARCASA - MARCO - PANTALLA - CONTROLES*/
 
 .carcasa {
-  height: 17em;
-  width: 11em;
+  height: 34em;
+  width: 20em;
   background-color: var(--grisCarcasa);
-  border-radius: 0.2rem 0.2rem 3rem 0.2rem;
+  border-radius: 1em 1em 5em 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 1px 1px 3px 0px black;
 }
 
 .marco {
-  height: 8em;
-  width: 10em;
+  height: 45%;
+  width: 90%;
   background-color: var(--grisMarco);
-  border-radius: 0.6em 0.6em 2em 0.6em;
+  border-radius: 1em 1em 3em 1em;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+  box-shadow: 0px 0px 3px 0px black;
 }
 
 .pantalla {
   /* background-color: rgb(175, 203, 70); */
   background-color: var(--verdePantalla);
-  height: 5.5em;
-  width: 6em;
+  height: 75%;
+  width: 65%;
+  box-shadow: 3px 6px 4px rgb(1, 32, 1) inset;
 }
+
+/* Controles */
 
 .controles {
-  height: 8em;
-  width: 10em;
-  /* border: 1px solid black; */
+  height: 50%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  /* border: 0.1px solid black; */
 }
-
-/*  Rotulos y tipografías */
 
 .rotulos {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   color: var(--azulTexto);
+  height: 10%;
+  width: 100%;
 }
 
+.vacio {
+  height: 15%;
+  width: 100%;
+  /* border: 0.1px solid black; */
+}
+
+.cruceta-botones {
+  height: 50%;
+  width: 100%;
+  /* border: 0.1px solid black; */
+  display: flex;
+  flex-direction: row;
+}
+
+.select-start {
+  height: 30%;
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.ajustar-cruceta {
+  height: 100%;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cruceta {
+  height: 5em;
+  width: 5em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.tecla {
+  background-color: black;
+}
+
+.posicion-2 {
+  border-radius: 4px 4px 0px 0px;
+  box-shadow: 1px 1px 1px 1px rgb(124, 124, 124) inset;
+}
+
+.posicion-4 {
+  border-radius: 4px 0px 0px 4px;
+  box-shadow: 1px 1px 1px 1px rgb(124, 124, 124) inset;
+}
+
+.posicion-5 {
+  background-color: black;
+}
+
+.central {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px 0.1px white inset;
+}
+
+.posicion-6 {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.posicion-8 {
+  border-radius: 0px 0px 4px 4px;
+}
+
+.hueco {
+  height: 100%;
+  width: 33.4%;
+  /* border: 1px solid black; */
+}
+
+.botonesAB {
+  height: 100%;
+  width: 33.3%;
+  /* border: 1px solid black; */
+  /* height: 30%;
+  width: 95%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row; */
+}
+
+.caja-boton-B {
+  /* display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  border: 1px solid black; */
+}
+
+.superior {
+  /* height: 20%;
+  width: 100%;
+  border: 1px solid black; */
+}
+
+.boton {
+  /* height: 80%;
+  width: 100%;
+  background-color: var(--magentaBoton);
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px white inset; */
+}
+
+.caja-boton-A {
+  /* display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  border: 1px solid black; */
+}
+
+/*  Rotulos y tipografías */
 .nintendo {
-  font-size: 0.45em;
+  font-size: 0.9em;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
 .gameboy {
-  font-size: 0.7em;
+  font-size: 1.4em;
   font-style: italic;
   text-transform: uppercase;
   margin: 0;
+  font-family: arial;
 }
 
 .tm {
-  font-size: 0.2em;
+  font-size: 0.4em;
   margin: 0;
+  font-family: arial;
 }
+
+/* Detalle Cruceta */

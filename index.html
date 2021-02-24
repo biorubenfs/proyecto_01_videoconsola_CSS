@@ -12,8 +12,10 @@
 
 <body>
 
+    <!-- un lienzo para enmarcar el objeto principal -->
     <div class="bg">
 
+        <!-- La carcasa, que contiene el marco con la pantalla y los botones. Todo tienes que estar aquí dentro -->
         <div class="carcasa">
 
             <div class="marco">
@@ -26,6 +28,54 @@
                     <h2 class="gameboy">Game Boy</h2>
                     <h2 class="tm">TM</h2>
                 </div>
+
+                <div class="vacio">
+                    <!-- Esto está vacío inten -->
+                </div>
+
+                <div class="cruceta-botones">
+                    <div class="ajustar-cruceta">
+                        <div class="cruceta">
+
+                            <!-- La cruceta tiene 9 casillas en tipo grid, cada una se le asigna un número.
+                            Las posiciones con botón, tienen la clase tecla para los elementos comunes -->
+                            <div class="posicion-1"></div>
+                            <div class="tecla posicion-2"></div>
+                            <div class="posicion-3"></div>
+                            <div class="tecla posicion-4"></div>
+                            <div class="tecla posicion-5">
+                                <div class="central"></div>
+                            </div>
+                            <div class="tecla posicion-6"></div>
+                            <div class="posicion-7"></div>
+                            <div class="tecla posicion-8"></div>
+                            <div class="posicion-9"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="hueco"></div>
+
+                    <div class="botonesAB">
+                        <div class="caja-boton-B">
+                            <div class="superior"></div>
+                            <div class="boton"></div>
+                        </div>
+
+                        <div class="caja-boton-A">
+                            <div class="inferior"></div>
+                            <div class="boton"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="select-start"></div>
+
+
+
+
+
             </div>
         </div>
     </div>
