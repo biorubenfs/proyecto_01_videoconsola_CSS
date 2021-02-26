@@ -12,72 +12,147 @@
 
 <body>
 
-    <!-- un lienzo para enmarcar el objeto principal -->
+    <!-- Un lienzo para enmarcar la gameboy -->
     <div class="bg">
 
-        <!-- La carcasa, que contiene el marco con la pantalla y los botones. Todo tienes que estar aquí dentro -->
         <div class="carcasa">
 
-            <div class="marco">
-                <div class="pantalla"></div>
+            <div class="top-carcasa">
+
+                <div class="top-esquina-izquierda"></div>
+                <div class="top-central">
+
+                    <div class="on-off">
+
+                        <div class="on-off-izquierda"></div>
+                        <div class="on-off-central"></div>
+                        <div class="on-off-derecha"></div>
+
+                    </div>
+                </div>
+
+                <div class="top-esquina-derecha"></div>
+            </div>
+
+            <div class="marco-pantalla">
+                <div class="marco-superior">
+
+                    <div class="lineas-izquierda">
+                        <div class="linea-azul"></div>
+                        <div class="linea-rosa"></div>
+                    </div>
+
+                    <div class="texto-marco">
+                        dot matrix with stereo sound
+                    </div>
+
+                    <div class="lineas-derecha">
+                        <div class="linea-azul"></div>
+                        <div class="linea-rosa"></div>
+                    </div>
+
+                </div>
+
+                <div class="marco-inferior">
+                    <div class="luz-battery">
+                        <div class="luz"></div>
+                        <div class="battery-texto">battery</div>
+                    </div>
+                    <div class="pantalla"></div>
+                </div>
+
+
+            </div>
+
+            <div class="rotulos">
+                <div class="nintendo-rotulo">Nintendo</div>
+                <div class="gameboy-rotulo">game boy</div>
+                <div class="tm-rotulo">tm</div>
             </div>
 
             <div class="controles">
-                <div class="rotulos">
-                    <h2 class="nintendo">Nintendo</h2>
-                    <h2 class="gameboy">Game Boy</h2>
-                    <h2 class="tm">TM</h2>
-                </div>
+                <div class="cruceta">
+                    <div class="flecha-izquierda">
+                    </div>
+                    <div class="cruceta-core">
+                        <div class="flecha-arriba"></div>
 
-                <div class="vacio">
-                    <!-- Esto está vacío inten -->
-                </div>
-
-                <div class="cruceta-botones">
-                    <div class="ajustar-cruceta">
-                        <div class="cruceta">
-
-                            <!-- La cruceta tiene 9 casillas en tipo grid, cada una se le asigna un número.
+                        <!-- La cruceta tiene 9 casillas en tipo grid, cada una se le asigna un número.
                             Las posiciones con botón, tienen la clase tecla para los elementos comunes -->
+                        <div class="boton-cruceta">
                             <div class="posicion-1"></div>
-                            <div class="tecla posicion-2"></div>
+                            <div class="tecla posicion-2">
+                                <div class="barra-horizontal"></div>
+                                <div class="barra-horizontal"></div>
+                                <div class="barra-horizontal"></div>
+                            </div>
                             <div class="posicion-3"></div>
-                            <div class="tecla posicion-4"></div>
+                            <div class="tecla posicion-4">
+                                <div class="barra-vertical"></div>
+                                <div class="barra-vertical"></div>
+                                <div class="barra-vertical"></div>
+                            </div>
                             <div class="tecla posicion-5">
                                 <div class="central"></div>
                             </div>
-                            <div class="tecla posicion-6"></div>
+                            <div class="tecla posicion-6">
+                                <div class="barra-vertical"></div>
+                                <div class="barra-vertical"></div>
+                                <div class="barra-vertical"></div>
+                            </div>
                             <div class="posicion-7"></div>
-                            <div class="tecla posicion-8"></div>
+                            <div class="tecla posicion-8">
+                                <div class="barra-horizontal"></div>
+                                <div class="barra-horizontal"></div>
+                                <div class="barra-horizontal"></div>
+                            </div>
                             <div class="posicion-9"></div>
-
                         </div>
 
+                        <div class="flecha-abajo"></div>
                     </div>
-
-                    <div class="hueco"></div>
-
-                    <div class="botonesAB">
-                        <div class="caja-boton-B">
-                            <div class="superior"></div>
-                            <div class="boton"></div>
-                        </div>
-
-                        <div class="caja-boton-A">
-                            <div class="inferior"></div>
-                            <div class="boton"></div>
-                        </div>
-                    </div>
+                    <div class="flecha-derecha"></div>
                 </div>
 
-                <div class="select-start"></div>
+                <div class="hueco"></div>
+                <div class="botonesAB">
+                    <div class="concavidad">
+                        <div class="concavidad-izquierda">
+                            <div class="boton"></div>
+                        </div>
+                        <div class="concavidad-central">
 
 
+                        </div>
+                        <div class="concavidad-derecha">
+                            <div class="boton"></div>
+                        </div>
+                    </div>
+                    <div class="rotulos-ab">
+                        <div class="rotulo-b">b</div>
+                        <div class="rotulo-a">a</div>
+                    </div>
 
-
-
+                </div>
             </div>
         </div>
+    </div>
+    <div class="select-start"></div>
+
+
+
+    <!-- html para el efecto de fondo de los botones A y B -->
+
+    <div class="box">
+        <div class="izquierda"></div>
+        <div class="centro"></div>
+        <div class="derecha"></div>
+    </div>
+
+
+    </div>
+
+
     </div>
 
 

@@ -6,141 +6,422 @@
   --magentaBoton: #8b0247;
 }
 
-/* Un lienzo para colocar el resto de elementos */
-
 .bg {
-  height: 60em;
-  width: 30em;
-  background-color: white;
-  border: 1px solid black;
+  height: 50em;
+  width: 20em;
+  background-color: beige;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 0.1px solid black;
 }
 
-/* Elementos principales: CARCASA - MARCO - PANTALLA - CONTROLES*/
-
 .carcasa {
-  height: 34em;
+  height: 32em;
   width: 20em;
   background-color: var(--grisCarcasa);
   border-radius: 1em 1em 5em 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 3px 0px black;
 }
 
-.marco {
-  height: 45%;
+.top-carcasa {
+  height: 4%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: grey;
+  border-bottom-style: double;
+}
+
+.marco-pantalla {
+  margin-top: 1em;
+  height: 44%;
   width: 90%;
   background-color: var(--grisMarco);
   border-radius: 1em 1em 3em 1em;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-  box-shadow: 0px 0px 3px 0px black;
-}
-
-.pantalla {
-  /* background-color: rgb(175, 203, 70); */
-  background-color: var(--verdePantalla);
-  height: 75%;
-  width: 65%;
-  box-shadow: 3px 6px 4px rgb(1, 32, 1) inset;
-}
-
-/* Controles */
-
-.controles {
-  height: 50%;
-  width: 90%;
-  display: flex;
   flex-direction: column;
-  /* border: 0.1px solid black; */
 }
 
 .rotulos {
+  height: 6%;
+  width: 90%;
+  /* background-color: rosybrown; */
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  /* justify-content: flex-start; */
   color: var(--azulTexto);
-  height: 10%;
-  width: 100%;
+  font-family: arial;
+  align-items: center;
 }
 
-.vacio {
-  height: 15%;
-  width: 100%;
-  /* border: 0.1px solid black; */
-}
-
-.cruceta-botones {
-  height: 50%;
-  width: 100%;
-  /* border: 0.1px solid black; */
+.controles {
+  height: 30%;
+  width: 90%;
+  /* background-color: var(--verdePantalla); */
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .select-start {
-  height: 30%;
-  width: 100%;
-  /* border: 1px solid black; */
+  height: 16%;
+  width: 90%;
+  background-color: var(--azulTexto);
 }
 
-.ajustar-cruceta {
+/* Top Carcasa */
+.top-esquina-izquierda {
   height: 100%;
-  width: 33.3%;
+  width: 5%;
+}
+
+.top-central {
+  height: 100%;
+  width: 90%;
+  border-right: grey;
+  border-right-style: double;
+  border-left: grey;
+  border-left-style: double;
+
   display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.top-esquina-derecha {
+  height: 100%;
+  width: 5%;
+}
+
+/* Boton on-off */
+.on-off {
+  height: 80%;
+  width: 25%;
+  /* background-color: hotpink; */
+  margin-left: 0.4em;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.on-off-izquierda {
+  height: 70%;
+  width: 10%;
+
+  border-left: 1px solid grey;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-radius: 1em 0em 0em 1em;
+}
+
+.on-off-central {
+  height: 70%;
+  width: 80%;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.on-off-derecha {
+  height: 70%;
+  width: 10%;
+  border-radius: 0em 1em 1em 0em;
+  border-right: 1px solid grey;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+/* Marco-pantalla */
+
+.marco-superior {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* background-color: indianred; */
+  align-items: center;
+}
+
+.marco-inferior {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* background-color: honeydew; */
+  margin-top: 0;
+}
+
+/* Marco superior */
+
+.lineas-izquierda {
+  height: 100%;
+  width: 30%;
+  /* background-color: bisque; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 0.2em;
+  align-items: flex-end;
+}
+
+.texto-marco {
+  height: 100%;
+  width: 50%;
+
+  flex-direction: row;
+  font-size: 0.4em;
+  color: white;
+  /* background-color: indianred; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lineas-derecha {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 0.2em;
+  align-items: flex-start;
+}
+
+.linea-azul {
+  height: 8%;
+  width: 80%;
+  background-color: darkblue;
+}
+
+.linea-rosa {
+  height: 8%;
+  width: 80%;
+  background-color: purple;
+}
+
+/* Marco inferior */
+
+.luz-battery {
+  margin-top: -2em;
+  display: flex;
+  height: 100%;
+  width: 18%;
+  /* background-color: cadetblue; */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.luz {
+  height: 0.6em;
+  width: 0.6em;
+  background-color: red;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 1px grey;
+}
+
+.battery-texto {
+  text-transform: uppercase;
+  height: 10%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.5em;
+  margin-top: 0.8em;
+}
+
+.pantalla {
+  /* margin-top: 1.4em; */
+  height: 86%;
+  width: 64%;
+  border-radius: 0.2em;
+  background-color: var(--verdePantalla);
+  box-shadow: 3px 6px 4px rgb(1, 32, 1) inset;
+}
+
+/* Rótulos */
+
+.nintendo-rotulo {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.gameboy-rotulo {
+  height: 100%;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.tm-rotulo {
+  height: 100%;
+  font-size: 0.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Controles */
 .cruceta {
-  height: 5em;
-  width: 5em;
+  height: 60%;
+  width: 30%;
+  /* background-color: wheat; */
+  border-radius: 50%;
+  /* box-shadow: 3em 3em 2em 2em rgba(170, 170, 170, 0.25) inset; */
+  /* box-shadow: 0em 0em 1em 1em var(--grisMarco) inset; */
+  box-shadow: 2em 2em 4em 1em #d8d8d8 inset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flecha-izquierda {
+  /* height: 6%;
+  width: 6%;
+  background-color: indigo; */
+  height: 0em;
+  width: 0em;
+
+  border-left: 4px solid transparent;
+  border-right: 4px solid rgb(190, 190, 190);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  margin-right: 0.1em;
+}
+
+.flecha-derecha {
+  /* height: 6%;
+  width: 6%;
+  background-color: indigo; */
+  height: 0em;
+  width: 0em;
+
+  border-left: 4px solid rgb(190, 190, 190);
+  border-right: 4px solid transparent;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  margin-left: 0.1em;
+}
+
+.cruceta-core {
+  height: 100%;
+  width: 88%;
+  /* background-color: khaki; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flecha-arriba {
+  border-bottom: 4px solid rgb(190, 190, 190);
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-top: 4px solid transparent;
+  margin-bottom: 0.1em;
+}
+.boton-cruceta {
+  height: 90%;
+  width: 100%;
+  /* background-color: lightpink; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
 
+.flecha-abajo {
+  height: 0em;
+  width: 0em;
+  border-top: 4px solid rgb(190, 190, 190);
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  margin-top: 0.1em;
+}
+
+.hueco {
+  height: 100%;
+  width: 35%;
+  /* background-color: yellow; */
+}
+
+.botonesAB {
+  height: 60%;
+  width: 35%;
+  /* background-color: wheat; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-25deg);
+}
+
+/* botones-cruceta */
 .tecla {
   background-color: black;
 }
 
 .posicion-2 {
   border-radius: 4px 4px 0px 0px;
-  box-shadow: 1px 1px 1px 1px rgb(124, 124, 124) inset;
+  /* box-shadow: 1px 1px 1px 1px rgb(124, 124, 124) inset; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2em;
+  align-items: center;
+  justify-content: center;
 }
 
 .posicion-4 {
   border-radius: 4px 0px 0px 4px;
-  box-shadow: 1px 1px 1px 1px rgb(124, 124, 124) inset;
+  /* box-shadow: 1px 1px 1px 1px rgb(124, 124, 124) inset; */
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.2em;
+  align-items: center;
+  justify-content: center;
 }
 
 .posicion-5 {
   background-color: black;
+  /* border-radius: 0.1em; */
+  /* background-color: #d8d8d8; */
+  /* box-shadow: 0em 0em 1em 0em black; */
 }
 
 .central {
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: white;
+  /* box-shadow: 1px 1px 1px 0.1px white inset; */
+
+  box-shadow: 0em 0em 3em 0em black inset;
   border-radius: 50%;
-  box-shadow: 1px 1px 1px 0.1px white inset;
 }
 
 .posicion-6 {
   border-radius: 0px 4px 4px 0px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.2em;
+  align-items: center;
+  justify-content: center;
 }
 
 .posicion-8 {
   border-radius: 0px 0px 4px 4px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2em;
+  align-items: center;
+  justify-content: center;
 }
 
 .hueco {
@@ -149,66 +430,79 @@
   /* border: 1px solid black; */
 }
 
-.botonesAB {
-  height: 100%;
-  width: 33.3%;
-  /* border: 1px solid black; */
-  /* height: 30%;
-  width: 95%;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: row; */
+/* Barras verticales y horizontales de la cruceta */
+.barra-horizontal {
+  height: 12%;
+  width: 60%;
+  background-color: rgb(36, 36, 36);
+  border-radius: 1em;
 }
 
-.caja-boton-B {
-  /* display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 50%;
-  border: 1px solid black; */
+.barra-vertical {
+  height: 60%;
+  width: 12%;
+  background-color: rgb(36, 36, 36);
+  border-radius: 1em;
 }
 
-.superior {
-  /* height: 20%;
+/* Botones B y A */
+.concavidad {
+  height: 50%;
   width: 100%;
-  border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  /* background-color: violet; */
+}
+
+.concavidad-izquierda {
+  height: 100%;
+  width: 45%;
+  background-color: #d8d8d8;
+  border-radius: 2em 0em 0em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.concavidad-central {
+  height: 100%;
+  width: 10%;
+  background-color: #d8d8d8;
+}
+
+.concavidad-derecha {
+  height: 100%;
+  width: 45%;
+  background-color: #d8d8d8;
+  border-radius: 0em 2em 2em 0em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .boton {
-  /* height: 80%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
   background-color: var(--magentaBoton);
-  border-radius: 50%;
-  box-shadow: 1px 1px 3px white inset; */
+  border-radius: 100%;
+  box-shadow: 0.1em 0.1em 0.2em 0.1em white inset;
 }
 
-.caja-boton-A {
-  /* display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 50%;
-  border: 1px solid black; */
+.boton-b {
 }
 
-/*  Rotulos y tipografías */
-.nintendo {
-  font-size: 0.9em;
+.boton-a {
+}
+
+.rotulos-ab {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-.gameboy {
-  font-size: 1.4em;
-  font-style: italic;
   text-transform: uppercase;
-  margin: 0;
-  font-family: arial;
+  font-size: 0.8em;
+  color: var(--azulTexto);
+  font-weight: bold;
 }
-
-.tm {
-  font-size: 0.4em;
-  margin: 0;
-  font-family: arial;
-}
-
-/* Detalle Cruceta */
