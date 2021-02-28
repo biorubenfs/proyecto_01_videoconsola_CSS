@@ -22,8 +22,7 @@ Réplica con **HTML** y **CSS** de la apariencia de una GameBoy clásica. Un peq
 3. Ejecuta:
 
    ```
-   sudo dpkg -i
-   sudo apt install google-chrome-stable
+   sudo dpkg -i code_[version].deb
    ```
 
 4. Abre vscode.
