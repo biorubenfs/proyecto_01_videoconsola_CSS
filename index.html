@@ -15,13 +15,16 @@
     <!-- Un lienzo para enmarcar la gameboy -->
     <div class="bg">
 
+        <!-- Absolutamente todo va dentro de la carcasa -->
         <div class="carcasa">
 
+            <!-- Detalles de la parte de arriba de la carcasa -->
             <div class="top-carcasa">
 
                 <div class="top-esquina-izquierda"></div>
                 <div class="top-central">
 
+                    <!-- Boton de on-off -->
                     <div class="on-off" onclick="encender()">
 
                         <div class="on-off-izquierda"></div>
@@ -32,9 +35,12 @@
                 </div>
 
                 <div class="top-esquina-derecha"></div>
-            </div>
+            </div> <!-- fin carcasa -->
 
+            <!-- Todos los componentes dentro del marco gris oscuro de la pantalla -->
             <div class="marco-pantalla">
+
+                <!-- Líneas y texto superior -->
                 <div class="marco-superior">
 
                     <div class="lineas-izquierda">
@@ -53,29 +59,35 @@
 
                 </div>
 
+                <!-- Componentes de la luz de la bateria y la pantalla -->
                 <div class="marco-inferior">
+
                     <div class="luz-battery">
                         <div class="luz" id="piloto-luz"></div>
                         <div class="battery-texto">battery</div>
                     </div>
+
+                    <!-- La pantalla, que incluye el logo y el sonido de encendido característico -->
                     <div class="pantalla">
-                        <div class="logo-nintendo"></div>
+                        <div class="logo-nintendo" id="logo"></div>
+                        <audio src="./sounds/gameboy_start_up.mp3" id="sonido"></audio>
                     </div>
                 </div>
+            </div> <!-- fin marco-pantalla-->
 
-
-            </div>
-
+            <!-- Parte media con los rotulos de Nintendo y GameBoy -->
             <div class="rotulos">
                 <div class="nintendo-rotulo">Nintendo</div>
                 <div class="gameboy-rotulo">game boy</div>
                 <div class="tm-rotulo">tm</div>
             </div>
 
+            <!-- Componentes de los controles principales, que incluyen la cruceta y los botones b y a -->
             <div class="controles">
+
+                <!-- Cruceta, incluyendo todos sus detalles -->
                 <div class="cruceta">
-                    <div class="flecha-izquierda">
-                    </div>
+                    <div class="flecha-izquierda"></div>
                     <div class="cruceta-core">
                         <div class="flecha-arriba"></div>
 
@@ -117,36 +129,46 @@
                 </div>
 
                 <div class="hueco"></div>
+
+                <!-- Botones B y A -->
                 <div class="botonesAB">
                     <div class="concavidad">
                         <div class="concavidad-izquierda">
                             <div class="boton"></div>
                         </div>
-                        <div class="concavidad-central">
 
+                        <div class="concavidad-central"></div>
 
-                        </div>
                         <div class="concavidad-derecha">
                             <div class="boton"></div>
                         </div>
                     </div>
+
                     <div class="rotulos-ab">
                         <div class="rotulo-b">b</div>
                         <div class="rotulo-a">a</div>
                     </div>
 
                 </div>
-            </div>
+            </div> <!-- fin controles-->
+
+            <!-- Botones de select y start, que incluyen además los detalles de los auriculares y las barras de sonido-->
             <div class="select-start">
 
+                <!-- caja vacía para ajustar tamaños -->
                 <div class="vacio"></div>
 
+                <!-- caja del medio, que incluye los botones de select y start y el detalle de los auriculares -->
                 <div class="botones-select-start">
+
+                    <!-- Botones select y start, propiamente -->
                     <div class="botones">
+
                         <div class="select">
                             <div class="boton-select-start"></div>
                             <div class="rotulo">select</div>
                         </div>
+
                         <div class="start">
                             <div class="boton-select-start"> </div>
                             <div class="rotulo">start</div>
@@ -154,13 +176,13 @@
 
                     </div>
 
+                    <!-- Detalle de los auriculares -->
                     <div class="auriculares">
                         <div class="contenedor-auriculares">
                             <div class="icono-auriculares"></div>
                             <div class="texto-auriculares">phones</div>
                         </div>
                     </div>
-
 
                     <div class="detalle-auriculares">
                         <div class="barra-vertical-auriculares"></div>
@@ -169,6 +191,7 @@
                     </div>
                 </div>
 
+                <!-- La barra de sonido -->
                 <div class="sonido">
 
                     <div class="barra-sonido"></div>
@@ -178,25 +201,14 @@
                     <div class="barra-sonido"></div>
                     <div class="barra-sonido"></div>
 
-
                 </div>
 
-            </div>
-        </div>
+            </div><!-- fin botones-select-start-->
+        </div> <!-- fin carcasa-->
     </div>
-
-    <div class="nintendo-logo">
-
-    </div>
-
-
-    </div>
-
-
-    </div>
-
 
     <script src="./js/main.js"></script>
+
 </body>
 
 </html>

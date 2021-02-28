@@ -4,16 +4,32 @@
   --grisMarco: #696a7c;
   --verdePantalla: #a3a303;
   --magentaBoton: #8b0247;
+  --purpura: purple;
+  --fuenteArial: Arial;
+  --grisFlecha: rgb(168, 168, 168);
+  --grisSelectStart: grey;
 }
 
 .bg {
-  height: 50em;
-  width: 20em;
-  background-color: beige;
+  height: 100%;
+  width: 100%;
+  padding-top: 5em;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* Partes Principales de la consola: TOP-CARCASA, CARCASA, MARCO-PANTALLA, ROTULOS, CONTROLES y SELECT-START */
+
+.top-carcasa {
+  height: 4%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: grey;
+  border-bottom-style: double;
 }
 
 .carcasa {
@@ -25,15 +41,6 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 1px 1px 3px 0px black;
-}
-
-.top-carcasa {
-  height: 4%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  border-bottom: grey;
-  border-bottom-style: double;
 }
 
 .marco-pantalla {
@@ -49,20 +56,16 @@
 .rotulos {
   height: 6%;
   width: 90%;
-  /* background-color: rosybrown; */
   display: flex;
   flex-direction: row;
-  /* justify-content: flex-start; */
   color: var(--azulTexto);
-  font-family: arial;
+  font-family: var(--fuenteArial);
   align-items: center;
 }
 
 .controles {
   height: 24%;
   width: 90%;
-  /* background-color: var(--verdePantalla); */
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -72,10 +75,11 @@
 .select-start {
   height: 22%;
   width: 90%;
-  /* background-color: var(--azulTexto); */
   display: flex;
   flex-direction: row;
 }
+
+/* TOP-CARCASA */
 
 /* Top Carcasa */
 .top-esquina-izquierda {
@@ -106,9 +110,7 @@
 .on-off {
   height: 80%;
   width: 25%;
-  /* background-color: hotpink; */
   margin-left: 0.4em;
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -118,13 +120,10 @@
 }
 
 .on-off-izquierda {
-  height: 0em;
-  width: 0em;
-
-  border-left: 5px solid transparent;
-  border-right: 5px solid rgb(168, 168, 168);
   border-top: 5px solid transparent;
+  border-right: 5px solid var(--grisFlecha);
   border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
 }
 
 .on-off-central {
@@ -134,27 +133,21 @@
   font-size: 0.6em;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  /* background-color: royalblue; */
 }
 
 .on-off-derecha {
-  height: 0em;
-  width: 0em;
-
-  border-right: 5px solid transparent;
-  border-left: 5px solid rgb(168, 168, 168);
   border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
   border-bottom: 5px solid transparent;
+  border-left: 5px solid var(--grisFlecha);
 }
 
-/* Marco-pantalla */
-
+/* MARCO-PANTALLA */
 .marco-superior {
   height: 10%;
   width: 100%;
   display: flex;
   flex-direction: row;
-  /* background-color: indianred; */
   align-items: center;
 }
 
@@ -163,7 +156,6 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  /* background-color: honeydew; */
   margin-top: 0;
 }
 
@@ -172,27 +164,25 @@
 .lineas-izquierda {
   height: 100%;
   width: 30%;
-  /* background-color: bisque; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 0.2em;
   align-items: flex-end;
+  row-gap: 0.2em;
 }
 
 .texto-marco {
   height: 100%;
   width: 50%;
-
-  flex-direction: row;
   font-size: 0.4em;
+
   color: white;
-  /* background-color: indianred; */
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fuenteArial);
 }
 
 .lineas-derecha {
@@ -201,20 +191,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 0.2em;
   align-items: flex-start;
+  row-gap: 0.2em;
 }
 
 .linea-azul {
   height: 8%;
   width: 80%;
-  background-color: darkblue;
+  background-color: var(--azulTexto);
 }
 
 .linea-rosa {
   height: 8%;
   width: 80%;
-  background-color: purple;
+  background-color: var(--purpura);
 }
 
 /* Marco inferior */
@@ -224,7 +214,7 @@
   display: flex;
   height: 100%;
   width: 18%;
-  /* background-color: cadetblue; */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -234,30 +224,20 @@
 .luz {
   height: 0.6em;
   width: 0.6em;
-  /* background-color: red; */
   border-radius: 50%;
-  /* box-shadow: 0px 0px 4px 1px grey; */
   background-color: maroon;
-  /* transition: box-shadow;
-  transition: background-color; */
 }
-
-/* .luz:hover {
-  box-shadow: 0px 0px 4px 1px grey;
-  background-color: red;
-} */
 
 .battery-texto {
   text-transform: uppercase;
   height: 10%;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fuenteArial);
   font-size: 0.5em;
   margin-top: 0.8em;
 }
 
 .pantalla {
-  /* margin-top: 1.4em; */
   height: 86%;
   width: 64%;
   border-radius: 0.2em;
@@ -265,6 +245,15 @@
   box-shadow: 3px 6px 4px rgb(1, 32, 1) inset;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.logo-nintendo {
+  display: none;
+  width: 8em;
+  height: 1.5em;
+  background-image: url(/img/nintendo-logo-removebg-preview.png);
+  background-size: cover;
 }
 
 /* Rótulos */
@@ -289,94 +278,77 @@
   text-transform: uppercase;
 }
 
-/* Controles */
+/* CONTROLES */
 .cruceta {
   margin-top: 1em;
   height: 76%;
   width: 30%;
-  /* background-color: wheat; */
   border-radius: 50%;
-  /* box-shadow: 3em 3em 2em 2em rgba(170, 170, 170, 0.25) inset; */
-  /* box-shadow: 0em 0em 1em 1em var(--grisMarco) inset; */
   box-shadow: 2em 2em 4em 1em #d8d8d8 inset;
+
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.flecha-izquierda {
-  /* height: 6%;
-  width: 6%;
-  background-color: indigo; */
-  height: 0em;
-  width: 0em;
-
+.flecha-arriba {
+  border-bottom: 4px solid var(--grisFlecha);
+  border-right: 4px solid transparent;
   border-left: 4px solid transparent;
-  border-right: 4px solid rgb(190, 190, 190);
   border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  margin-right: 0.1em;
+  margin-bottom: 0.1em;
 }
 
 .flecha-derecha {
-  /* height: 6%;
-  width: 6%;
-  background-color: indigo; */
-  height: 0em;
-  width: 0em;
-
-  border-left: 4px solid rgb(190, 190, 190);
+  border-left: 4px solid var(--grisFlecha);
   border-right: 4px solid transparent;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
   margin-left: 0.1em;
 }
 
-.cruceta-core {
-  height: 100%;
-  width: 88%;
-  /* background-color: khaki; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.flecha-arriba {
-  border-bottom: 4px solid rgb(190, 190, 190);
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  border-top: 4px solid transparent;
-  margin-bottom: 0.1em;
-}
-.boton-cruceta {
-  height: 90%;
-  width: 100%;
-  /* background-color: lightpink; */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-
 .flecha-abajo {
-  height: 0em;
-  width: 0em;
-  border-top: 4px solid rgb(190, 190, 190);
+  border-top: 4px solid var(--grisFlecha);
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
   border-bottom: 4px solid transparent;
   margin-top: 0.1em;
 }
 
+.flecha-izquierda {
+  border-left: 4px solid transparent;
+  border-right: 4px solid var(--grisFlecha);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  margin-right: 0.1em;
+}
+
+.cruceta-core {
+  height: 100%;
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* La cruceta se organiza como un grid de 9 posiciones, numeradas del 1 al 9 */
+.boton-cruceta {
+  height: 90%;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
 .hueco {
   height: 70%;
   width: 35%;
-  /* background-color: yellow; */
 }
 
 .botonesAB {
   height: 78%;
   width: 35%;
-  /* background-color: wheat; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -385,14 +357,18 @@
   margin-top: 1em;
 }
 
-/* botones-cruceta */
+/* Botones-cruceta */
 .tecla {
   background-color: black;
 }
 
+.posicion-1 .posicion-3 .position-5 .posicion-7 .posicion-9 {
+  /* Se ha dejado en blanco intencionadamente, únicamente con fines aclaratorios. Como CSS no recomienda emplear clases vacías, agregamos lo siguiente para que no marque la advertencia */
+  background-color: none;
+}
+
 .posicion-2 {
   border-radius: 4px 4px 0px 0px;
-  /* box-shadow: 1px 1px 1px 1px rgb(124, 124, 124) inset; */
   display: flex;
   flex-direction: column;
   row-gap: 0.2em;
@@ -402,7 +378,6 @@
 
 .posicion-4 {
   border-radius: 4px 0px 0px 4px;
-  /* box-shadow: 1px 1px 1px 1px rgb(124, 124, 124) inset; */
   display: flex;
   flex-direction: row;
   column-gap: 0.2em;
@@ -410,19 +385,10 @@
   justify-content: center;
 }
 
-.posicion-5 {
-  background-color: black;
-  /* border-radius: 0.1em; */
-  /* background-color: #d8d8d8; */
-  /* box-shadow: 0em 0em 1em 0em black; */
-}
-
 .central {
   height: 100%;
   width: 100%;
   background-color: white;
-  /* box-shadow: 1px 1px 1px 0.1px white inset; */
-
   box-shadow: 0em 0em 3em 0em black inset;
   border-radius: 50%;
 }
@@ -445,12 +411,6 @@
   justify-content: center;
 }
 
-/* .hueco {
-  height: 100%;
-  width: 33.4%;
-  border: 1px solid black;
-} */
-
 /* Barras verticales y horizontales de la cruceta */
 .barra-horizontal {
   height: 12%;
@@ -472,7 +432,6 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  /* background-color: violet; */
 }
 
 .concavidad-izquierda {
@@ -506,13 +465,8 @@
   width: 80%;
   background-color: var(--magentaBoton);
   border-radius: 100%;
-  box-shadow: 0.1em 0.1em 0.2em 0.1em white inset;
-}
-
-.boton-b {
-}
-
-.boton-a {
+  /* box-shadow: 0.05em 0.05em 0.2em 0.05em white inset; */
+  border: 0.1em solid rgb(109, 0, 0);
 }
 
 .rotulos-ab {
@@ -521,7 +475,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fuenteArial);
   text-transform: uppercase;
   font-size: 0.8em;
   color: var(--azulTexto);
@@ -530,25 +484,25 @@
 
 /* Parte inferior: select-start */
 
+/* Hueco vacío de la izquierda */
 .vacio {
   height: 100%;
   width: 22%;
-  /* background-color: burlywood; */
 }
 
+/* Botones Select y Start del medio */
 .botones-select-start {
   height: 100%;
   width: 46%;
-  /* background-color: cadetblue; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/*  Barras del lateral por donde sale el sonido */
 .sonido {
   height: 100%;
   width: 32%;
-  /* background-color: darkgoldenrod; */
   display: flex;
   flex-direction: row;
   column-gap: 0.6em;
@@ -557,6 +511,7 @@
   align-items: center;
   margin-top: 0.4em;
 }
+
 .barra-sonido {
   height: 48%;
   width: 6%;
@@ -565,11 +520,9 @@
 }
 
 /* Botones select-start y auriculares */
-
 .botones {
   height: 60%;
   width: 100%;
-  /* background-color: hotpink; */
   display: flex;
   flex-direction: row;
   column-gap: 0.8em;
@@ -580,7 +533,6 @@
 .select {
   height: 40%;
   width: 32%;
-  /* background-color: lavender; */
   display: flex;
   flex-direction: column;
   transform: rotate(-26deg);
@@ -589,7 +541,6 @@
 .start {
   height: 40%;
   width: 32%;
-  /* background-color: lavender; */
   display: flex;
   flex-direction: column;
   transform: rotate(-26deg);
@@ -597,19 +548,18 @@
 
 .boton-select-start {
   height: 38%;
-  /* background-color: lightblue; */
   display: flex;
   flex-direction: row;
   border-radius: 0.4em;
   box-shadow: 0 0 0 0.2em #d8d8d8;
-  background-color: grey;
+  background-color: var(--grisSelectStart);
 }
 
 .rotulo {
   height: 45%;
   text-transform: uppercase;
   color: var(--azulTexto);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fuenteArial);
   font-size: 0.7em;
   text-align: center;
   font-weight: bold;
@@ -619,7 +569,6 @@
 .auriculares {
   height: 15%;
   width: 100%;
-  /* background-color: indianred; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -629,7 +578,6 @@
 .detalle-auriculares {
   height: 8%;
   width: 30%;
-  /* background-color: khaki; */
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -674,37 +622,7 @@
   background-color: rgb(167, 167, 167);
 }
 
-/* Animaciones y demás */
-
-.logo-nintendo {
-  width: 8em;
-  height: 1.5em;
-  background-image: url(/img/nintendo-logo-removebg-preview.png);
-  background-size: cover;
-  /* border: 1px solid black; */
-  animation-name: nintendo;
-  animation-duration: 4s;
-  position: relative;
-}
-
-/* .nintendo-logo {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  animation-name: nintendo;
-  animation-duration: 1.5s;
-} */
-
-@keyframes nintendo {
-  0% {
-    /* background-color: green; */
-    top: -1.2em;
-  }
-
-  100% {
-    top: 4em;
-  }
-}
+/* Hover sobre el boton on-off */
 
 .on-off:hover {
   cursor: pointer;
