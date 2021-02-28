@@ -22,10 +22,10 @@
                 <div class="top-esquina-izquierda"></div>
                 <div class="top-central">
 
-                    <div class="on-off">
+                    <div class="on-off" onclick="encender()">
 
                         <div class="on-off-izquierda"></div>
-                        <div class="on-off-central"></div>
+                        <div class="on-off-central">OFF · ON</div>
                         <div class="on-off-derecha"></div>
 
                     </div>
@@ -55,10 +55,12 @@
 
                 <div class="marco-inferior">
                     <div class="luz-battery">
-                        <div class="luz"></div>
+                        <div class="luz" id="piloto-luz"></div>
                         <div class="battery-texto">battery</div>
                     </div>
-                    <div class="pantalla"></div>
+                    <div class="pantalla">
+                        <div class="logo-nintendo"></div>
+                    </div>
                 </div>
 
 
@@ -135,18 +137,56 @@
 
                 </div>
             </div>
+            <div class="select-start">
+
+                <div class="vacio"></div>
+
+                <div class="botones-select-start">
+                    <div class="botones">
+                        <div class="select">
+                            <div class="boton-select-start"></div>
+                            <div class="rotulo">select</div>
+                        </div>
+                        <div class="start">
+                            <div class="boton-select-start"> </div>
+                            <div class="rotulo">start</div>
+                        </div>
+
+                    </div>
+
+                    <div class="auriculares">
+                        <div class="contenedor-auriculares">
+                            <div class="icono-auriculares"></div>
+                            <div class="texto-auriculares">phones</div>
+                        </div>
+                    </div>
+
+
+                    <div class="detalle-auriculares">
+                        <div class="barra-vertical-auriculares"></div>
+                        <div class="barra-vertical-auriculares"></div>
+                        <div class="barra-vertical-auriculares"></div>
+                    </div>
+                </div>
+
+                <div class="sonido">
+
+                    <div class="barra-sonido"></div>
+                    <div class="barra-sonido"></div>
+                    <div class="barra-sonido"></div>
+                    <div class="barra-sonido"></div>
+                    <div class="barra-sonido"></div>
+                    <div class="barra-sonido"></div>
+
+
+                </div>
+
+            </div>
         </div>
     </div>
-    <div class="select-start"></div>
 
+    <div class="nintendo-logo">
 
-
-    <!-- html para el efecto de fondo de los botones A y B -->
-
-    <div class="box">
-        <div class="izquierda"></div>
-        <div class="centro"></div>
-        <div class="derecha"></div>
     </div>
 
 
@@ -156,7 +196,7 @@
     </div>
 
 
-
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

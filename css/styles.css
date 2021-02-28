@@ -59,7 +59,7 @@
 }
 
 .controles {
-  height: 30%;
+  height: 24%;
   width: 90%;
   /* background-color: var(--verdePantalla); */
   /* border: 1px solid black; */
@@ -70,9 +70,11 @@
 }
 
 .select-start {
-  height: 16%;
+  height: 22%;
   width: 90%;
-  background-color: var(--azulTexto);
+  /* background-color: var(--azulTexto); */
+  display: flex;
+  flex-direction: row;
 }
 
 /* Top Carcasa */
@@ -110,32 +112,39 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-radius: 0.6em;
+  background-color: rgb(200, 200, 200);
+  justify-content: center;
 }
 
 .on-off-izquierda {
-  height: 70%;
-  width: 10%;
+  height: 0em;
+  width: 0em;
 
-  border-left: 1px solid grey;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-  border-radius: 1em 0em 0em 1em;
+  border-left: 5px solid transparent;
+  border-right: 5px solid rgb(168, 168, 168);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
 }
 
 .on-off-central {
   height: 70%;
-  width: 80%;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  width: 90%;
+  color: rgb(168, 168, 168);
+  font-size: 0.6em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  /* background-color: royalblue; */
 }
 
 .on-off-derecha {
-  height: 70%;
-  width: 10%;
-  border-radius: 0em 1em 1em 0em;
-  border-right: 1px solid grey;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  height: 0em;
+  width: 0em;
+
+  border-right: 5px solid transparent;
+  border-left: 5px solid rgb(168, 168, 168);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
 }
 
 /* Marco-pantalla */
@@ -225,10 +234,18 @@
 .luz {
   height: 0.6em;
   width: 0.6em;
-  background-color: red;
+  /* background-color: red; */
   border-radius: 50%;
-  box-shadow: 0 0 4px 1px grey;
+  /* box-shadow: 0px 0px 4px 1px grey; */
+  background-color: maroon;
+  /* transition: box-shadow;
+  transition: background-color; */
 }
+
+/* .luz:hover {
+  box-shadow: 0px 0px 4px 1px grey;
+  background-color: red;
+} */
 
 .battery-texto {
   text-transform: uppercase;
@@ -246,6 +263,8 @@
   border-radius: 0.2em;
   background-color: var(--verdePantalla);
   box-shadow: 3px 6px 4px rgb(1, 32, 1) inset;
+  display: flex;
+  justify-content: center;
 }
 
 /* Rótulos */
@@ -272,7 +291,8 @@
 
 /* Controles */
 .cruceta {
-  height: 60%;
+  margin-top: 1em;
+  height: 76%;
   width: 30%;
   /* background-color: wheat; */
   border-radius: 50%;
@@ -348,13 +368,13 @@
 }
 
 .hueco {
-  height: 100%;
+  height: 70%;
   width: 35%;
   /* background-color: yellow; */
 }
 
 .botonesAB {
-  height: 60%;
+  height: 78%;
   width: 35%;
   /* background-color: wheat; */
   display: flex;
@@ -362,6 +382,7 @@
   justify-content: center;
   align-items: center;
   transform: rotate(-25deg);
+  margin-top: 1em;
 }
 
 /* botones-cruceta */
@@ -424,11 +445,11 @@
   justify-content: center;
 }
 
-.hueco {
+/* .hueco {
   height: 100%;
   width: 33.4%;
-  /* border: 1px solid black; */
-}
+  border: 1px solid black;
+} */
 
 /* Barras verticales y horizontales de la cruceta */
 .barra-horizontal {
@@ -505,4 +526,186 @@
   font-size: 0.8em;
   color: var(--azulTexto);
   font-weight: bold;
+}
+
+/* Parte inferior: select-start */
+
+.vacio {
+  height: 100%;
+  width: 22%;
+  /* background-color: burlywood; */
+}
+
+.botones-select-start {
+  height: 100%;
+  width: 46%;
+  /* background-color: cadetblue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sonido {
+  height: 100%;
+  width: 32%;
+  /* background-color: darkgoldenrod; */
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.6em;
+  transform: rotate(-30deg);
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0.4em;
+}
+.barra-sonido {
+  height: 48%;
+  width: 6%;
+  border-radius: 0.2em;
+  background-color: rgb(160, 160, 160);
+}
+
+/* Botones select-start y auriculares */
+
+.botones {
+  height: 60%;
+  width: 100%;
+  /* background-color: hotpink; */
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.8em;
+  padding-top: 1.2em;
+  justify-content: center;
+}
+
+.select {
+  height: 40%;
+  width: 32%;
+  /* background-color: lavender; */
+  display: flex;
+  flex-direction: column;
+  transform: rotate(-26deg);
+}
+
+.start {
+  height: 40%;
+  width: 32%;
+  /* background-color: lavender; */
+  display: flex;
+  flex-direction: column;
+  transform: rotate(-26deg);
+}
+
+.boton-select-start {
+  height: 38%;
+  /* background-color: lightblue; */
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.4em;
+  box-shadow: 0 0 0 0.2em #d8d8d8;
+  background-color: grey;
+}
+
+.rotulo {
+  height: 45%;
+  text-transform: uppercase;
+  color: var(--azulTexto);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0.2em;
+}
+
+.auriculares {
+  height: 15%;
+  width: 100%;
+  /* background-color: indianred; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.detalle-auriculares {
+  height: 8%;
+  width: 30%;
+  /* background-color: khaki; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  column-gap: 0.2em;
+}
+
+/* Auriculares */
+
+.contenedor-auriculares {
+  background-color: #d8d8d8;
+  border: 1px solid rgb(167, 167, 167);
+  height: 80%;
+  width: 44%;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.2em;
+  align-items: center;
+}
+
+.icono-auriculares {
+  height: 90%;
+  width: 20%;
+  background-image: url(/img/headphones-24.png);
+  border-radius: 1em;
+  background-size: cover;
+  margin-left: 0.1em;
+}
+
+.texto-auriculares {
+  height: 90%;
+  width: 80%;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+}
+
+.barra-vertical-auriculares {
+  height: 100%;
+  width: 10%;
+  background-color: rgb(167, 167, 167);
+}
+
+/* Animaciones y demás */
+
+.logo-nintendo {
+  width: 8em;
+  height: 1.5em;
+  background-image: url(/img/nintendo-logo-removebg-preview.png);
+  background-size: cover;
+  /* border: 1px solid black; */
+  animation-name: nintendo;
+  animation-duration: 4s;
+  position: relative;
+}
+
+/* .nintendo-logo {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: nintendo;
+  animation-duration: 1.5s;
+} */
+
+@keyframes nintendo {
+  0% {
+    /* background-color: green; */
+    top: -1.2em;
+  }
+
+  100% {
+    top: 4em;
+  }
+}
+
+.on-off:hover {
+  cursor: pointer;
 }
