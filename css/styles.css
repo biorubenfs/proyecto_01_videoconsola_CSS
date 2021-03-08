@@ -601,7 +601,7 @@
 .icono-auriculares {
   height: 90%;
   width: 20%;
-  background-image: url(/img/headphones-24.png);
+  background-image: url(../img/headphones-24.png);
   border-radius: 1em;
   background-size: cover;
   margin-left: 0.1em;
