@@ -1,6 +1,8 @@
 # Proyecto 01 videoconsola CSS :video_game:
 
-Réplica con **HTML** y **CSS** de la apariencia de una GameBoy clásica. Un pequeño script de **Javascript** permite algo de animación.
+Réplica con **HTML** y **CSS** de la apariencia de una GameBoy clásica. 
+
+Un pequeño script de **Javascript** permite algo de animación.
 ![gameboy](https://user-images.githubusercontent.com/65553496/109416194-05526d80-79bd-11eb-89be-0745882373c7.gif)
 
 ### Herramientas :hammer:
